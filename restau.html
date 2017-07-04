@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv = "Content-Script-Type" content="text/javascript">
+	<meta http-equiv = "Content-Style-Type" content="text/css">
+	<meta http-equiv = "X-UA-Compatible" content ="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>믿을 수 있는 다이어트 정보</title>
+	
+    <!--페이스북, 블로그,밴드 미리보기 썸네일-->
+<!--   <meta property="og:url"                content="http://www.dano.me"/>-->
+	<meta property="og:title"              content="믿을 수 있는 다이어트 정보" />
+	<meta property="og:description"        content="날마다 제공되는 효과 좋은 운동영상, 꿀팁, 레시피! 다이어트 후기 가득!" />
+	<!--<meta property="og:image"              content="http://dano.me/images/dano_thumbnail.png" />
+    <!--검색최적화 태그-->
+    <meta name="title"              content="다노" />
+    <meta name="description"        content="No.1 다이어트 매거진, 다이어트운동, 다이어트식단, 다이어트 후기" />
+	<!--<meta name="image"       content="http://dano.me/images/dano_thumbnail.png"/>-->
+    
+<!--    <meta name="naver-site-verification" content="d29d53fd3378b45db7bbcf0149807508d33b360a"/>-->
+    
+<!--<script src="libs/jquery/jquery-1.12.4.min.js"></script>-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
+<!--	<script src="js/common.js"></script>-->
+<!--	<script src="js/index.js"></script>-->
+<!--    <script src="js/favicon.js"></script>-->
+<!--	<script src='/libs/jquery.bxslider/jquery.bxslider.min.js'></script>-->
+<!--	<link rel ="stylesheet" href ="libs/jquery.bxslider/jquery.bxslider.css">-->
+    <link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/js/swiper.min.js">
+	<link rel="stylesheet" type="text/css" href="css/restau.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+    
+	<script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-55452621-2', 'auto');
+  		ga('require', 'displayfeatures');
+  		ga('send', 'pageview');
+  	</script>
+    
+<!--  	<meta name="google-site-verification" content="9vai2Jg2WXFHbQXSqVLtHetzDx-6uxcpPVYRG6NYbC4" />-->
+</head>	
+    
+<body>
+<div class="container">
+	<div class="gradient_all"></div>
+	<div class="popUp">
+		<img class='popUpclose' onclick='togglePopup()' src='images/mo_popup_close.png'/>
+		<img class='popUpdanoIc' src='images/mo_app_icon.png'/>
+		<p class='popUpTitle'>해당 기능은 다노 앱에서 사용하실 수 있어요!</p>
+		<div class="popUpText">
+		<p>다이어트 매거진 다노!</p><p>수 많은 다이어트 성공담.</p>
+		<p>나에게 딱 맞는 운동영상, 유익한 다이어트 팁이 넘쳐나는 곳!</p>
+		<p>지금 다노앱을 만나보세요 :)</p>
+		</div>
+		<div class='popUpDown' onclick='appDown()'>다운로드 하러가기</div>
+	</div>
+	<div class="top">
+        
+        
+        <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">북마크함</a>
+  <a href="#">알림</a>
+  <a href="#">공지사항/이벤트</a>
+  <a href="#">설정</a>
+</div>
+  <span class="titlefont" style="font-size:20px;cursor:pointer" onclick="openNav()"><img class="dano_ic" src="images/menu1.png"></span>
+        <a href="index.html">  <img class="logo" src="images/logo3.PNG"></a>
+      
+          
+    <img class="search" src="images/search_icon.png" style="font-size:20px;cursor:pointer" onclick="openNav()">
+        
+<!--<span class="titlefont" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; DIETAPP</span>-->
+<!--        <a href="index.html">-->
+<!--			<img class="dano_ic" src="images/dano_ci.png"/>-->
+<!--		</a>-->
+        
+             <div class="nav">
+  <ul>
+    <li class="one"><a href="index.html">핫토픽</a></li><!--
+ --><li class="two"><a href="tips.html">팁</a></li><!--
+ --><li class="three"><a href="workouts.html">운동</a></li><!--
+ --><li class="four"><a href="notes.html">노트</a></li>
+    <li class="active"><a href="restau.html">식단</a></li>      
+
+    <hr />
+  </ul>
+</div>
+<!--		<a href="https://itunes.apple.com/kr/app/daieoteu-noteu/id844433509?l=en&mt=8&ls=1"><img class="btn_appstore" src="images/btn_appstore.png"/></a>-->
+<!--		<a href="https://play.google.com/store/apps/details?id=com.wFeeltheTaste_4955781"><img class="btn_play_store" src="images/btn_play_store.png"/></a>-->
+<!--       <img class="btn_download" src="images/btn_download.png"/>-->
+    </div>
+
+
+
+        
+<!--   <div class="t_banner">-->
+<!--    <a href="http://dietno1.tistory.com/9"><img class="bannerImg" src="images/diet1.jpg" style="cursor: pointer;"></a>-->
+<!--   </div>-->
+    
+	<!--	<table class="thread" id="thread1">
+        <tbody>
+            <tr>
+                <td style="cursor: pointer;"><a href="http://dietapp.cafe24.com/dating/BeautifulBouquets/BeautifulBouquets.html"><img class="t_img" src="images/cover.jpg">
+                    </a>
+                    <span>여름은 알리는 예쁜 꽃다발</span>
+                    <p class="pid">2949</p>
+                </td>
+                <td style="cursor: pointer;"><a href="http://dietapp.cafe24.com/dating/EverlandFood/EverlandFood.html"><img class="t_img" src="images/cover1.jpg">
+                    </a>
+                    <span>애버랜드 간식 BEST7</span>
+                    <p class="pid">2970</p>
+                </td>
+                <td style="cursor: pointer;"><a href="http://dietapp.cafe24.com/dating/GyeonggiAttractions/GyeonggiAttractions.html"><img class="t_img" src="images/dating/GyeonggiAttractions/images/cover.jpg"></a>
+                    <span>경기도 사진 명소 BEST7</span>
+                    <p class="pid">2969</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="cursor: pointer;"><a href="http://dietapp.cafe24.com/diet/GoodfoodforBreakfast/GoodfoodforBreakfast.html"><img class="t_img" src="images/diet/GoodfoodforBreakfast/images/cover.jpg"></a>
+                    <span>아침에 좋은 음식 BEST6</span>
+                    <p class="pid">2968</p>
+                    <img class="video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom: 97px; left: 10.5333px;">
+                </td>
+                <td style="cursor: pointer;"><a href="http://dietapp.cafe24.com/FashionBeauty/RecommendedInternationalBrands/RecommendedInternationalBrands.html"><img class="t_img" src="images/FashionBeauty/RecommendedInternationalBrands/images/cover.jpg"></a>
+                    <span>해외 유명 뷰티 브랜드 BEST7</span>
+                   <p class="pid">2967</p>
+                    <img class="images/video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom: 97px; left: 10.5333px;">
+                </td>
+                <td style="cursor: pointer;"><a href="http://dietapp.cafe24.com/dating/Line5Attractions/Line5Attractions.html"><img class="t_img" src="images/dating/Line5Attractions/images/cover.jpg"></a>
+                    <span>서울 나들이장소 BEST8</span>
+                    <p class="pid">2966</p>
+                </td>
+            </tr>
+        </tbody>
+</table>-->
+	 <!--<div class="today_note">
+		<p class="main-title-text">오늘의 노트</p>
+        
+	 <div class="today_note_contents" style="height: 95px; cursor: pointer;">
+         <a href="http://beauty102.tistory.com/entry/%EB%B9%84%EB%A7%8C%EC%9D%B4-%EB%90%98%EB%8A%94-%EC%9D%B4%EC%9C%A0">
+     <img class="tNote_img" src="diet/BEST7BreakfastFood/images/cover.jpg" style="width: 80px; height: 80px;"></a>
+         
+     <div class="cTextArea1">
+            <div class="title">다이어터만 아는 이 기쁨!</div>
+            <div class="content">오늘 그냥 한번 입어본 핏한 원피스샷.
+
+             뒷구리랑 힙이 많이 좋아져서 완전 기쁘긴하나
+
+             운동은 하면 할수록 ...</div>
+        </div>
+        <p class="pid">1586238</p>
+        </div>
+        
+        
+         <div class="today_note_contents" style="height: 95px; cursor: pointer;">
+            <a href="http://beauty102.tistory.com/entry/%EB%AC%B4%EC%82%B0%EC%86%8C-%EC%9A%B4%EB%8F%99-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8-%EB%A7%A8%EC%86%90-%EC%9A%B4%EB%8F%99%EB%B2%95">
+            <img class="tNote_img" src="diet/BEST7SpecialFoodsDiet/images/cover.jpg" style="width: 80px; height: 80px;"></a>
+            <div class="cTextArea1"><div class="title">날로날로 발전 중인 다노브로 :)</div>
+                <div class="content">2016년 1월...
+
+             사진찍길 정말 싫어하던 내가 이제 셀카도찍고...
+
+             변화도 보고...ㅋ
+
+               이젠 남들처...
+                </div>
+            </div>
+            <p class="pid">1586182</p>
+        </div>
+        
+        
+      <div class="today_note_contents" style="height: 95px; cursor: pointer;">
+            <a href="http://beauty102.tistory.com/entry/%EC%A7%80%EB%B0%A9%EC%9D%84-%ED%83%9C%EC%9A%B0%EA%B3%A0-%EA%B7%BC%EC%9C%A1%EC%9D%84-%ED%83%84%ED%83%84%ED%95%98%EA%B2%8C-%EA%B0%80%EA%BF%80-%EC%88%98-%EC%9E%88%EB%8A%94-%ED%99%88%ED%8A%B8">
+            <img class="tNote_img" src="diet/7BestFoodforDiet/images/cover2.jpg" style="width: 80px; height: 80px;"></a>
+            <div class="cTextArea1">
+                <div class="title">최고의 다이어트 자극은 바로 나!</div>
+                <div class="content">작년에 맞는 반바지가 없고 이 바지 두개도 스판으로 버텼는데 오늘 입어보니 정말 못입을 정도로 크다 치마도 ...</div>
+            </div>
+            <p class="pid">1586054</p></div>
+    
+        <div class="today_note_contents" style="cursor: pointer;">
+            <a href="http://beauty102.tistory.com/entry/%EC%A7%80%EB%B0%A9%EC%9D%84-%EB%B6%84%ED%95%B4%ED%95%98%EB%8A%94-%EB%94%94%ED%86%A1%EC%8A%A4-%EC%9A%B4%EB%8F%99-6%EA%B0%80%EC%A7%80">
+            
+            <img class="tNote_img" src="diet/BestFoodForMen/images/cover.jpg" style="width: 80px; height: 80px;"></a>
+            <div class="cTextArea1">
+                <div class="title">2년 만에 복근이를 만났어요 :)♡</div>
+                <div class="content">2년째 다이어트중 
+       복근이가 얼굴을 드러내기 시작했다!!!!!
+       ㅠㅠㅠㅠ
+       체대언니방법으로 찍어봄 ㅎㅎ
+       함께해준
+       #다노 고맙습니당</div>
+            </div>
+            <p class="pid">1585792</p></div></div>-->
+    
+<div class="today_note">
+<!--		<p class="main-title-text">오늘의 노트</p>-->
+    
+    
+    <table class="thread" id="thread5">
+    <tr style="cursor:pointer;">
+    <a href="godown6.html">
+    <img class="t_img" src="images/chicken_625x350_51465894493.jpg">
+        
+               
+<!--        <img class="video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom:70px; left:10.5333px; float:left;">-->
+          </a>
+       
+         <span><br><h4><center>헐리웃 여배우들의 다이어트 팁</center></h4></span>
+        <div class="cTextArea">
+        <div class="content"><center>다이어트 저격하는 헐리웃 스타들의 일상 &amp; 다이어트팁</center></div>
+<!--     <span>30min Workout</span> -->
+<!--        <p class="pid">2965</p>-->
+           </div>     
+    </tr>
+        
+        
+        
+        
+        
+        
+        
+    <tr style="cursor:pointer;">
+    <a href="godown1.html">
+    <img class="t_img" src="images/hr/cover.jpg">
+        
+               
+<!--        <img class="video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom:70px; left:10.5333px; float:left;">-->
+          </a>
+       
+        <span><br><h4><center>살 안빠지는 사람들의 특징</center></h4></span>
+        <div class="cTextArea1">
+<!--        <p><center></center></p>-->
+            <div class="content"><center>체중을 줄이지 않는 이유를 알아보십시오.</center></div>
+<!--     <span>30min Workout</span> -->
+<!--        <p class="pid">2965</p>-->
+              </div>  
+    </tr>
+    
+    
+    <tr style="cursor:pointer;">
+    <a href="godown2.html">
+    <img class="t_img" src="images/k/cover.jpg">
+        
+               
+<!--        <img class="video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom:70px; left:10.5333px; float:left;">-->
+          </a>
+       
+        <span><br><h4><center>이 5가지 음식이 슈퍼푸드로 선정된 이유</center></h4></span>
+       <div class="cTextArea1">
+            <div class="title">영국의 영양 전문가 롭 홉슨(Rob Hobson)은 '슈퍼 푸드 10가지'를 선정해 발표했다.</div>
+            <div class="content">영국의 일간지 '데일리 익스프레스'(Daily Express)의 최근 기사를 통해서다. 다음은 그가 10가지 식품을 슈퍼 푸드로 선정한 이유다.</div>
+        </div>
+<!--     <span>30min Workout</span> -->
+<!--        <p class="pid">2965</p>-->
+                
+    </tr>
+    
+    <tr style="cursor:pointer;">
+    <a href="godown6.html">
+    <img class="t_img" src="images/j/cover.jpg">
+        
+               
+<!--        <img class="video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom:70px; left:10.5333px; float:left;">-->
+          </a>
+       
+         <span><br><h4><center>헐리웃 여배우들의 다이어트 팁</center></h4></span>
+        <div class="cTextArea">
+        <div class="content"><center>다이어트 저격하는 헐리웃 스타들의 일상 &amp; 다이어트팁</center></div>
+<!--     <span>30min Workout</span> -->
+<!--        <p class="pid">2965</p>-->
+           </div>     
+    </tr>
+        
+        </table>
+    </div>
+    
+    
+   
+    
+	<!--<table class="thread" id="thread2">
+         
+      
+	<tbody>
+         
+        <tr>
+              <p class="title-text">오늘의 노트</p>
+            <td style="cursor: pointer;">
+              
+                <a href="videopage_4.html">
+                <img class="t_img" src="images/workout2.PNG"></a>
+
+                <span><h5>30 Minute Low Impact Workout</h5></span> 
+                <p class="pid">2965</p>
+                <img class="video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom: 70px; left: 10.5333px;">
+            </td>
+            <td style="cursor: pointer;">
+                
+                <a href="videopage_6.html">
+
+                    <img class="t_img" src="images/workout3.PNG"></a>
+
+                <span><h5>주요 칼로리를 연소시키는 30 분 재택 운동</h5></span>
+                <p class="pid">2961</p>
+                <img class="video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom: 70px; left: 10.5333px;">
+            </td>
+            <td style="cursor: pointer;">
+
+                <a href="videopage_3.html">
+                    <img class="t_img" src="diet/BestFoodForMen/images/cover.jpg"></a>
+                <span>남자 몸에 좋은음식 BEST7</span>
+                <p class="pid">2960</p>
+                <img class="video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom: 97px; left: 10.5333px;">
+            </td>
+        </tr>
+        <tr>
+            <td style="cursor: pointer;">
+               <a href="videopage_5.html"> <img class="t_img" src="images/workout4.PNG"></a>
+                <span><h5>칼로리 - 횃불 30 분 운동.</h5></span>
+                <p class="pid">2959</p>
+                <img class="video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom: 97px; left: 10.5333px;">
+            </td>
+            <td style="cursor: pointer;">
+                <a href="videopage_7.html">
+                <img class="t_img" src="images/workout6.PNG"></a>
+                 <span><h5>칼로리 - 횃불 30 분 운동.</h5></span>
+                <p class="pid">2958</p>
+                <img class="video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom: 70px; left: 10.5333px;">
+            </td>
+            <td style="cursor: pointer;">
+               <a href="videopage_4.html">
+                <img class="t_img" src="KnowledgeInformation/BEST7BakeriesSeoul/images/cover.jpg"></a>
+               <span><h5>칼로리 - 횃불 30 분 운동.</h5></span>
+                <p class="pid">2957</p>
+                <img class="video_icon" src="images/video_icon.png" style="width: 26px; height: 26px; bottom: 70px; left: 10.5333px;">
+            </td>
+        </tr>
+        </tbody>
+    </table>-->
+  
+    
+	
+
+<div class= "footer">
+	<!--	<div class='fTop'>
+		<div class='fLink' onclick='goSite(0)'><img src='images/mo_footer_danoshop.png'/><span class='fTitle'>&nbsp;</span><span class="fTitleName"></span><span class='fAddr'>www.danoshop.net</span></div><div class='fLink' onclick='goSite(1)'><img src='images/mo_footer_mydano.png'/><span class='fTitle'>&nbsp;</span><span class="fTitleName"></span><span class='fAddr'>www.mydano.net</span></div><div class='fLink' onclick='goDagymApp()'><img src='images/mo_footer_dagym.png'/><span class='fTitle'>&nbsp;</span><span class="fTitleName"></span><span class='fAddr'>android/ios</span></div>
+</div>-->
+	<div class="bottom">
+		<p>Copyright © ContentsMarketing, Inc. All Rights Reserved.</p>
+		<p><span>사업장소재지</span>  서울특별시 강남구 도산대로92길 42, 4층,5층 (청담동 62-33) | <span>사업자번호</span> 000-00-00000 | <span>통신판매업신고</span></p>
+		<p><span>대표전화</span> Telephone-Number | <span>이메일</span> info@email.com| <span>대표이사</span>CEO Name | <span>개인정보책임자</span> Name | <a href="./policies.html">이용약관 바로가기</a>
+		</p>
+	</div>
+</div>
+    
+    
+   <script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+      
+    <!--<script>
+    
+    $(document).ready(function(){
+  $('.slider1').bxSlider();//no parameters
+});
+    
+    </script>-->
+    
+    
+    
+</body>
+</html>

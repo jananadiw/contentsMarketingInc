@@ -1,0 +1,312 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+*,html{
+	padding:0;
+	margin:0;
+}
+
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+	line-height: 23px;
+	-webkit-text-size-adjust: 100%;
+}
+table{
+	table-layout: fixed;
+}
+.gradient_all{
+    /* Fallback for web browsers that don't support RGBa */
+    margin-top: 53px;
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 50;
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.titlefont{
+    
+}
+
+.container{
+	width: 100%;
+	position: relative;
+	left:0;
+	right:0;
+	margin:auto;
+	overflow: hidden;
+}
+.top{
+	position: fixed;
+	top:0;
+	height: 53px;
+	background-color: #e30513;
+	z-index: 1000;
+	width:100%;
+}
+.shareToggle{
+	display: none;
+	position: fixed;
+	top:62px;
+	right: 12px;
+	width: 60px;
+	z-index: 100;
+}
+.shareToggle img{
+	margin-top: 10px;
+	cursor: pointer;
+}
+.footer{
+	width: 100%;
+	background-color: #3c3c3c;
+	color: #979797;
+}
+.footer .fTop{
+	width: 100%;
+	position: relative;
+	margin:auto;
+	border-bottom: solid 2px #3b3b3b;
+	padding-bottom: 25px;
+	line-height: 19px;
+}
+.footer .fLink{
+	cursor: pointer;
+	padding-top: 10px;
+	width: 33.3%;
+	display: inline-block;
+}
+.footer .fLink img{
+	padding-top: 16px;
+	padding-bottom: 3px;
+	display: block;
+	margin:auto;
+	width: 30%;
+}
+.footer .fLink .fAddr{
+	display: none;
+}
+.footer .fLink .fTitle{
+	display: block;
+	text-align: center;
+	text-align: center;
+	font-size: 12px;
+	color:#979797;
+}
+.footer .fLink .fTitleName{
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	color:#979797;
+}
+.footer .bottom{
+	width: 100%;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-align: center;
+	font-size: 10px;
+	line-height: 19px;
+}
+.footer .bottom p{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.fLink a{
+	text-decoration: none;
+}
+.dano_ic{
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 33px;
+	float: left;
+	content: url("/images/uimenu.png");
+}
+.dano_ic img, .btn_appstore img{
+	max-height: 100%;
+}
+.btn_appstore{
+	display: none;
+	float:right;
+}
+.btn_play_store{
+	display: none;
+	float: right;
+}
+.btn_download{
+	margin-top: 12px;
+	height: 30px;
+	margin-right: 10px;
+	float:right;
+}
+.t_banner{
+	margin-top:100px;
+}
+.bannerImg{
+	width: 700px;
+}
+img{
+	max-width: 100%;
+}
+p.pid{
+	display: none;
+}
+.main-title-text{
+	font-size: 19px;
+	padding-left: 15px;
+	display: table-cell;
+	vertical-align: middle;
+	height: 60px;
+}
+.btn_share{
+	margin-top: 12px;
+	height: 30px;
+	margin-right: 10px;
+	float:right;
+}
+
+.popUp{
+	display: none;
+	background-color: white;
+	position: fixed;
+	margin-top: 27%;
+	margin-left: 5%;
+	width: 90%;
+	text-align: center;
+	z-index: 1200;
+	border-radius: 5px;
+}
+.popUp .popUpclose{
+	position: absolute;
+	cursor: pointer;
+	width:4%;
+	top:5%;
+	right: 5%;
+}
+.popUp .popUpdanoIc{
+	display: block;
+	width: 18%;
+	margin-top: 13%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.popUp .popUpTitle{
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 8%;
+	font-size: 20px;
+	color: black;
+	line-height: 26px;
+}
+.popUp .popUpText{
+	padding-left: 30px;
+	padding-right: 30px;
+	line-height: 19px;
+	margin-top: 7%;
+	font-size: 15px;
+	color:#b4b4b4;
+}
+.popUp .popUpDown{
+	background-color: #22d4b6;
+	width: 90%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	margin-left: 5%;
+	margin-bottom: 6%;
+	height: 10%;
+	border-radius: 5px;
+	margin-top: 8%;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+@media(min-width: 700px){
+.container{
+	width: 700px;
+}
+.shareToggle{
+	width: 70px;
+}
+.top{
+	width:700px;
+}
+
+.dano_ic{
+/*	content: url("/images/menu1.png");*/
+	margin-left: 5px;
+	margin-top: 16px;
+	height: 18px;
+}
+.btn_download{
+	display: none;
+}
+.btn_appstore{
+	display: block;
+	height: 34px;
+	margin-top: 8px;
+	margin-right: 1px;
+	padding-right: 0px;
+	float:right;
+}
+.btn_play_store{
+	display: block;
+	float: right;
+	margin-top: 8px;
+	margin-right: 11px;
+}
+.footer{
+	width: 100%;
+	background-color: #3c3c3c;
+	color: #979797;
+}
+.footer .fTop{
+	width: 800px;
+	position: relative;
+	margin:auto;
+	border-bottom: solid 1px black;
+}
+.footer .fLink{
+	height: 100px;
+	width: 33.3%;
+	display: inline-block;
+}
+.footer .fLink img{
+	float: left;
+	width: 50px;
+	padding-top: 25px;
+}
+.footer .fLink .fAddr{
+	display: block;
+	float: left;
+	margin-left:10px;
+	color:#979797;
+	text-decoration:underline;
+}
+.footer .fLink .fTitle{
+	float: left;
+	margin-left:10px;
+	margin-top: 32px;
+}
+.footer .fLink .fTitleName{
+	float: left;
+	margin-top: 32px;
+	padding-right: 50px;
+}
+.footer .bottom{
+	width: 100%;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-align: center;
+	font-size: 8px;
+}
+.popUp{
+	width: 350px;
+	margin-left: 175px;
+	margin-top: 100px;
+}
+.main-title-text{
+	padding-left: 3px;
+}
+}
